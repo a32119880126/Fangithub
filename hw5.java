@@ -9,13 +9,13 @@ public class hw5 {
 	public hw5() throws IOException{
 		// TODO Auto-generated constructor stub
 		buf = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("¥­¤é¤¤¤È½Ð¿é¤J0¡A¥­¤é±ß¤W©Î¬O¨Ò°²¤é½Ð¿é¤J1");
+		System.out.println("å¹³æ—¥ä¸­åˆè«‹è¼¸å…¥0ï¼Œå¹³æ—¥æ™šä¸Šæˆ–æ˜¯ä¾‹å‡æ—¥è«‹è¼¸å…¥1");
 		String num = buf.readLine();
 		int time = Integer.parseInt(num);
-		System.out.println("½Ð¿é¤J¤j¤H¼Æ¶q");
+		System.out.println("è«‹è¼¸å…¥å¤§äººæ•¸é‡");
 		String num1 = buf.readLine();
 		int big = Integer.parseInt(num1);
-		System.out.println("½Ð¿é¤J¤p«Ä¼Æ¶q");
+		System.out.println("è«‹è¼¸å…¥å°å­©æ•¸é‡");
 		String num2 = buf.readLine();
 		int small = Integer.parseInt(num2);
 		people = big + small;
@@ -42,7 +42,7 @@ public class hw5 {
 				price = finalprice;
 			}
 			else if(small > 0 && small < free){
-				price = adult * (big - (free - small)) + child * (free - small);
+				price = adult * (big - (free - small));
 				price = price * 1.1f;
 				float finalprice = new BigDecimal(price).setScale(0, BigDecimal.ROUND_HALF_UP).floatValue();
 				price = finalprice;
@@ -65,8 +65,8 @@ public class hw5 {
 				price = finalprice;
 			}
 		}
-		System.out.println("¥»¦¸®ø¶O¤@¦@" + people + "¤H ¤j¤H" + big + "¦ì ¤p«Ä" + small + "¦ì" + " ¤@¦@" + free + "¤H§K¶O");
-		System.out.println("Á`ª÷ÃB" + Math.round(price));
+		System.out.println("æœ¬æ¬¡æ¶ˆè²»ä¸€å…±" + people + "äºº å¤§äºº" + big + "ä½ å°å­©" + small + "ä½" + " ä¸€å…±" + free + "äººå…è²»");
+		System.out.println("ç¸½é‡‘é¡" + Math.round(price));
 	}
 
 	public static void main(String[] args) throws IOException {
